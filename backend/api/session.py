@@ -37,4 +37,4 @@ class Session(Resource):
         if token in sessions:
             sessions.pop(token)
 
-        return 'Successful', 200
+        return 'Session deleted', 200

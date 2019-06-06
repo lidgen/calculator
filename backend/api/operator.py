@@ -66,3 +66,5 @@ class Operator(Resource):
                 session['operator'] = None if operator == 'equal' else operator
 
                 return {'result': session['1st_operand']}, 200
+        else:
+            return 'Press AC to start a new session', 404

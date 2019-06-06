@@ -22,4 +22,6 @@ class Operand(Resource):
             else:
                 session['2nd_operand'] = operand
 
-            return {'result': operand}, 200
+            return 'Successful', 200
+        else:
+            return 'Press AC to start a new session', 404
