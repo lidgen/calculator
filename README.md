@@ -1,6 +1,6 @@
 # A calculator with REST api as backend and javascript as frontend.
 
-## The document of APIs is backend/README.md
+## The document of APIs is [backend/README.md](https://github.com/lidgen/calculator/blob/master/backend/README.md)
 
 ## How to use
 
