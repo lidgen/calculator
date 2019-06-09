@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_restful import Api
+from flask_cors import CORS
 from api import Operator, Operand, Session
 import os
 import logging.config
@@ -20,6 +21,8 @@ def create_app(test_config=None):
     api.add_resource(Operand, "/operand/<operand>/<token>")
     api.add_resource(Operator, "/operator/<operator>/<token>")
     api.add_resource(Session, "/session", "/session/<token>")
+
+    CORS(app, support_credentials=True)
 
     return app
 

@@ -58,13 +58,12 @@ class Operator(Resource):
                 else:
                     session['1st_operand'] = ret
                     session['operator'] = operator
-                    return {'result': ret}, 200
+                    if operator == 'equal':
+                        session['operator'] = None
 
-                if operator == 'equal':
-                    session['operator'] = None
+                    return {'result': ret}, 200
             else:
                 session['operator'] = None if operator == 'equal' else operator
-
                 return {'result': session['1st_operand']}, 200
         else:
             return 'Press AC to start a new session', 404
