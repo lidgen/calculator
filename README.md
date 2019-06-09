@@ -18,3 +18,8 @@ make start
 ```
 
 3. open Chrome and goto http://localhost:3000/, then test with the frontend.
+
+## Known issues
+
+1. frontend doesn't send the same operator to backend
+2. backend messages should be more clearly
